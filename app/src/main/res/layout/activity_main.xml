@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".View.MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="COMPANY STOCKS"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Balance"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/c_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+
+            android:textSize="@dimen/company_price_size" />
+        <Button
+            android:id="@+id/graph"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graph"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button
+            android:id="@+id/buy"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Buy"/>
+        <Button
+            android:id="@+id/sell"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sell"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/g_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_margin"
+        android:layout_marginTop="@dimen/list_margin"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/icon_image_size"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_image_size"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/google" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/grey" />
+
+
+        <TextView
+            android:id="@+id/G_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/company_price_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/G_rate"
+                android:layout_width="@dimen/company_text_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:text="Rate%" />
+
+            <!--<ImageView
+
+                android:id="@+id/G_rateimage"
+                android:layout_width="@dimen/rate_image_size"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/f_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_margin"
+        android:layout_marginTop="@dimen/list_margin"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/icon_image_size"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_image_size"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/facebook" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/grey" />
+
+
+        <TextView
+
+            android:id="@+id/f_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/company_price_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/f_rate"
+                android:layout_width="@dimen/company_text_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:text="Rate%" />
+
+      <!--      <ImageView
+
+                android:id="@+id/f_rateimage"
+                android:layout_width="@dimen/rate_image_size"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />-->
+
+        </LinearLayout>
+        <!-- <Button
+
+             android:id="@+id/f_rate"
+             android:layout_width="@dimen/company_text_size"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="down" />-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/m_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_margin"
+        android:layout_marginTop="@dimen/list_margin"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/icon_image_size"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_image_size"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/microsoft" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/grey" />
+
+
+        <TextView
+            android:id="@+id/m_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/company_price_size" />
+
+        <!--   <Button
+
+               android:id="@+id/m_rate"
+               android:layout_width="@dimen/company_text_size"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="down" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/m_rate"
+                android:layout_width="@dimen/company_text_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:text="Rate%" />
+
+        <!--    <ImageView
+
+                android:id="@+id/m_rateimage"
+                android:layout_width="@dimen/rate_image_size"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/fs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_margin"
+        android:layout_marginTop="@dimen/list_margin"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="@dimen/icon_image_size"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/fs_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fetch sky"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/company_text_size"
+                android:textStyle="bold" />
+            
+
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/grey" />
+
+        <TextView
+
+            android:id="@+id/fs_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/company_price_size" />
+
+        <!-- <Button
+
+             android:id="@+id/fs_rate"
+             android:layout_width="@dimen/company_text_size"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="down" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/fs_rate"
+                android:layout_width="@dimen/company_text_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:text="Rate%" />
+<!--
+            <ImageView
+
+                android:id="@+id/fs_rateimage"
+                android:layout_width="@dimen/rate_image_size"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/a_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_margin"
+        android:layout_marginTop="@dimen/list_margin"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="@dimen/icon_image_size"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_image_size"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/amazon" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/grey" />
+
+        <TextView
+
+            android:id="@+id/A_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="8"
+            android:text="Price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/company_price_size" />
+
+        <!-- <Button
+             android:id="@+id/a_rate"
+             android:layout_width="@dimen/company_text_size"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="Rate" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/a_rate"
+                android:layout_width="@dimen/company_text_size"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/grey"
+                android:text="Rate%" />
+
+    <!--        <ImageView
+
+                android:id="@+id/a_rateimage"
+                android:layout_width="@dimen/rate_image_size"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey" />
+
+</LinearLayout>
